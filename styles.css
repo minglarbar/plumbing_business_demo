@@ -2,7 +2,6 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     margin:0;
     background:#f5f7fb;
-    color:#333;
 }
 
 
@@ -14,169 +13,209 @@ body{
 }
 
 .sections-title{
-    color:#0077c0;
+    color:#0077cc;
     font-weight: bold;
     text-align: center;
     margin-bottom: 40px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 /* Common settings Ends*/
 
 
 /* -------------------------------------------------- */
 /* Header Start */
 /* -------------------------------------------------- */
-header{
-    background:white;
-    border-bottom:1px solid #ddd;
+.header{
+    /* background-image: url("Images/wave-separator.png"); */
+    background-color:#0077cc;
+    color:white;
+    border-bottom:none;
     position: sticky;
     top:0;
     z-index:1000;
+    height:80px;
+    display: flex;
+    justify-content: space-between;
 }
-.logo-area{
+.header-left-section{
     display:flex;
     align-items: center;
-    gap:3px;
+    gap:10px;
 }
 .logo{
-    width: 80px;
-    height:auto;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover{
-    transform:scale(1.1);
+    height:40px;
+    margin-left:24px;
+    /* background-color: orange; */
+    border-radius: 7px;
+    
 }
 
 .logo-text{
-    font-weight:bold;
+    font-weight:bolder;
     font-size:18px;
-    transition: transform 0.3s ease;
-    animation: color-change 4s infinite;
-}
-
-
-.logo-text:hover{
-    color:#0077c0;
-    transform:scale(1.1);
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:15px 0;
-}
-
-.nav a{
-    margin-left:20px;
-    text-decoration: none;
-    color:#0077ff;
-    display:inline-block;
     transition: transform 0.2s ease, color 0.2s ease;
 }
-
-nav a:hover{
+.logo-text:hover{
+  transform: scale(1.1);
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    padding-top:20px;
+}
+.nav a{
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+    color:white;
+}
+.nav a:hover{
     font-weight: bold;
-    transform: scale(1.1);
+    transform: scale(1.01);
+    box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.8);  
+}
+.nav-link{
+    /* border:1px solid white; */
+    padding:10px;
+    border-radius: 20px;
 }
 
 
-.menu-toggle{
-    display:none;
-    background:none;
-    border:none;
-    font-size:40px;
-    color:#0077cc;
-    /* margin-left:10px; */
-}
-
-
-
-/* Defines the animation stages */
-@keyframes color-change {
-  0% {
-    color: #97E7F5; /* Start color */
-  }
-  50%{
-     color:#009DD1 ; /* Middle color */
-  }
-  100% {
-    color: #0077c0; /* End Color */
-  }
-
-}
-.phone-icon{
-    width:28px;
-    height:28px;
-    margin-bottom:-15px;
-    transform: translateX(20px);
-}
-
-.phone-number{
-    font-size:12px;
-    text-align:center;
-    text-wrap:nowrap;
-    
+.header-right-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
 }
 .phone-box{
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content: center;
-    gap:6px;
-    text-decoration:none;
-    color:#0077c0;
-    font-size:13px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    border: 1px solid white;
+    padding:20px 5px;
+    border-radius: 10px;
+    /* background-color: orange; */
+    height:30px;
+    text-decoration: none;
 }
 .phone-box:hover{
     transform: scale(1.05);
+    box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.8);  
 }
-.phone_and_menu{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.phone-icon{
+    width:20px;
+    height:28px;
+    margin-right: 3px;
+}
+.phone-number{
+    font-size:15px;
+    text-align:center;
+    text-wrap:nowrap;
+    color:white;
+}
+.menu-toggle{
+    display:none;
+    /* background-color: orange; */
+    background: none;
+    border:none;
+    font-size:25px;
+    color:white;
+    height:50px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    /* margin-left:10px; */
 }
 /* -------------------------------------------------- */
 /* Header End */
 /* -------------------------------------------------- */
 
+/* -------------------------------------------------- */
+/* Trust Bar Section Starts */
+/* -------------------------------------------------- */
+.trust-bar{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  background:#ffffff;
+  padding:20px;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  font-weight:bold;
+}
 
+.trust-item{
+  color:#0077cc;
+  font-size:16px;
+}
+/* -------------------------------------------------- */
+/* Trust Bar Section Ends */
+/* -------------------------------------------------- */ 
 
 /* -------------------------------------------------- */
 /* Hero Section Start */
 /* -------------------------------------------------- */
 .hero{
-    background-image: url("images/hero-bg.png");
-    padding:120px 0px;
-    text-align: center;
-    font-weight: bold;
-    color:#0077c0;
+    background-image: url("images/Plumber1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
+    min-height: 100vh;
+
+    display: flex;
 }
 
 .hero-box{
-    /* background: rgba(27, 30, 235, 0.301); */
-    background: #ddd;
-    padding:40px 50px;
-    border-radius: 10px;
-    display:inline-block;
-    max-width: 600px;
-    opacity: 0.8;
+    width: 100%;
+    min-height: 100vh;
+
+    background: rgba(14, 88, 184, 0.01);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 20px;
+    color: #0077cc;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+h1{
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+h2{
+    margin-top: 0px;
+    font-size: 40px;
+    font-style: italic;
+}
+.hero-text{
+    margin-top: 0px;
+    font-size: 20px;
+}
+
 .btn, .hero_call{
     display:inline-block;
-    background: #005183;
-    color:white;
+    background: white;
+    color:#0077cc;
+    border:2px solid #0077cc;
     padding:12px 24px;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 50px;
     margin-top:20px;
-    border:none;
+
     cursor:pointer;
 }
 .hero_call{
-    width: 85px;
+    width: 132px;
 }
 .btn:hover{
     transform:translateY(-2px);
@@ -185,6 +224,12 @@ nav a:hover{
 .hero_call:hover{
     transform:translateY(-2px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);   
+} 
+.google-rating-text{
+  color:white;
+}
+#home{
+    scroll-margin-top: 100px;
 }
 /* -------------------------------------------------- */
 /* Hero Section End */
@@ -192,10 +237,29 @@ nav a:hover{
 
 
 /* -------------------------------------------------- */
+/* Info Section Start */
+/* -------------------------------------------------- */
+.Info_section{
+    padding:80px 0px;
+
+}
+.h1-text, .hero-rating{
+    color:white;
+}
+/* -------------------------------------------------- */
+/* Info Section End */
+/* -------------------------------------------------- */
+
+
+
+
+
+
+/* -------------------------------------------------- */
 /* Services Section Starts */
 /* -------------------------------------------------- */
 .service_section{
-    padding:80px 0px;
+    padding-top:100px;
 }
 
 .grid{
@@ -211,8 +275,11 @@ nav a:hover{
     border-radius: 10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
     text-align: center;
-    color:#0077c0;
+    color:black;
+    width: 100%;
     max-width: 300px;
+    margin: 0 auto;
+    border:1px solid #0077cc;
 }
 .service p{
     text-align: left;
@@ -222,10 +289,22 @@ nav a:hover{
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 .img{
-    height:160px;
-    background:#e5e7eb;
-    border-radius:6px;
-    margin-bottom:15px;
+    width: 100%;
+    height: 180px;        /* control image height */
+    overflow: hidden;     /* hide overflow */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 🔥 keeps image nicely cropped */
+    border-radius: 6px;
+    transition: transform 0.5s ease;
+}
+.img img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 /* -------------------------------------------------- */
 /* Services Section Ends */
@@ -234,6 +313,11 @@ nav a:hover{
 /* -------------------------------------------------- */
 /* Contacts Section Starts */
 /* -------------------------------------------------- */
+
+.contact_section{
+    margin-top:100px;
+}
+
 .contacts_container{
     display:flex;
     justify-content:center;
@@ -267,7 +351,7 @@ nav a:hover{
 .contact-card h3{
     margin-bottom: 8px;
     font-size: 18px;
-    color: #0077cc;
+    color: blacl;
 }
 .contact-card p{
     margin: 0;
@@ -275,13 +359,16 @@ nav a:hover{
 }
 .contact-card a{
     text-decoration: none;
-    color: #0077cc; 
+    color: black; 
     display: inline-block;
 }
 
 .contact-card a:hover{
     transform: scale(1.1);
     cursor:hand;
+}
+#contact{
+    scroll-margin-top: 100px;
 }
 /* -------------------------------------------------- */
 /* Contacts Section Ends */
@@ -292,8 +379,8 @@ nav a:hover{
 /* -------------------------------------------------- */
 .area_section{
     padding: 80px 0px;
-    background:#0077ff;
-    color:white;
+    /* background:orange; */
+    color:#0077cc;
 }
 .area-title{
     font-weight: bold;
@@ -311,7 +398,9 @@ nav a:hover{
 /* -------------------------------------------------- */
 /* Review Section Starts */
 /* -------------------------------------------------- */
-
+.review_section{
+    margin-top:100px;
+}
 .testimonial-slider{
   position:relative;
   max-width:700px;
@@ -335,6 +424,9 @@ nav a:hover{
 .review p{
 font-size:clamp(16px,2.5vw,20px);
 }
+#reviews{
+    scroll-margin-top: 100px;
+}
 /* -------------------------------------------------- */
 /* Review Section Ends */
 /* -------------------------------------------------- */
@@ -349,11 +441,17 @@ font-size:clamp(16px,2.5vw,20px);
     display:flex;
     flex-direction:column;
     gap:12px;
+    width:100%;
 }
-input, textarea{
-    padding:10px;
-    border:1px solid #ccc;
+input, textarea, select{
+    padding:12px;
+    border:1px solid #0077cc;
     border-radius:6px;
+    width: 100%;
+    font-size: 16px;
+}
+#quotes{
+    scroll-margin-top: 100px;
 }
 /* -------------------------------------------------- */
 /* Quotation Section Ends */
@@ -369,27 +467,110 @@ footer{
     
 }
 
+/* Modal Background */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Box */
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease;
+}
+
+/* Success Popup Box */
+
+.success-box{
+text-align:center;
+padding:30px;
+}
+
+/* Circle */
+
+.checkmark-circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#28a745;
+margin:0 auto 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:pop 0.4s ease;
+}
+
+/* Checkmark */
+
+.checkmark{
+  width:25px;
+  height:50px;
+  border-right:5px solid white;
+  border-bottom:5px solid white;
+  transform:rotate(45deg);
+}
+
+/* Close Button */
+
+.close-btn {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Pop Animation */
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 
 /* Mobile Friendly CSS Codes */
 @media(max-width:768px){
 
-nav{
+#mainNav{
     display:none;
 }
-nav.show{
-    display:block;
+#mainNav.show{
+    display:flex;
+    flex-direction:column;
     position:absolute;
     top:70px;
     right:20px;
     background:white;
     padding:20px;
-    border:1px solid #ddd;
     border-radius:8px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    z-index:999;
 }
-nav a{
-    display:block;
+
+#mainNav a{
     margin:10px 0;
+    color:#0077cc;
 }
 
 .menu-toggle{
@@ -399,5 +580,16 @@ nav a{
 .logo-text{
     font-size:14px;
 }
+/* .logo-area{
+    transform:translateX(-30px);
+} */
+.trust-bar{
+    gap:15px;
+    font-size:14px;
+}
+
+.service{
+        max-width: 100%;
+    }
 
 }
