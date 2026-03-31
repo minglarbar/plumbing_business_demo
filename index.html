@@ -3,8 +3,55 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cleaners</title>
-        <link rel="stylesheet" href="styles.css">
+        <title>Plumber Website Demo</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- 
+        BASIC SEO STTINGS
+        NEEED TO CUSTOMISE TITLE, DESCRIPTION, KEYWORDS, AUTHOR 
+        Why this matters
+        Title → appears in Google search results
+
+        Description → summary shown in search
+
+        Keywords → small SEO signal
+        -->
+        <meta name="description" content="Waterways Plumbing provides reliable plumbing services in Brisbane suburbs. Call now for fast and affordable plumbing services.">
+        <meta name="keywords" content="plumbers, plumbing services, Brisbane">
+        <meta name="author" content="Waterways Plumbing">
+
+            <!-- BASIC SEO STTINGS
+        Add Open Graph Tags (For Social Sharing)
+        When someone shares the site on Facebook or WhatsApp, these tags control the preview. 
+        NEED TO CUSTOMISE THE URL, CONTENT, DESCRIPTIONS, IMAGE CONTENT
+        -->
+        <meta property="og:title" content="Waterways Plumbing Service">
+        <meta property="og:description" content="Reliable plumbing services in Brisbane. Fast response and affordable rates.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://minglarbar.github.io/plumbing_business_demo">
+        <meta property="og:image" content="https://minglarbar.github.io/plumbing_business_demo/images/Plumber1.jpg">
+        <!-- 
+        BASIC SEO STTINGS    
+        This helps Google understand the business. 
+        NEED TO CUSTOMISE DATA ACCORDINGLY
+        -->
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Plumbers",
+        "name": "Waterways Plumbing",
+        "telephone": "0000111222",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 Hillgrove Street",
+        "addressLocality": "Taigum",
+        "addressRegion": "QLD",
+        "postalCode": "4018",
+        "addressCountry": "AU"
+        },
+        "areaServed": "Brisbane",
+        "url": "https://minglarbar.github.io/plumbing_business_demo"
+        }
+        </script>
     </head>
 
     <body>
@@ -13,115 +60,116 @@
          Include Logo, business name, navigation links to below sections. 
          In mobile, hide navigation links and show humburger menu. 
         -->
-        <header>
-        <div class="container nav">
-
-            <!-- LEFT: Logo -->
-            <div class="logo-area">
-            <img src="images/logo-icon.png" class="logo">
-            <span class="logo-text">SparkleClean Experts</span>
+        <div class="header">
+            <div class="header-left-section">
+                <img class="logo"src="images/logo.png">
+                <span class="logo-text">Waterways <br> Plumbing</span>
             </div>
-
-            <!-- CENTER: Navigation -->
-            <nav id="mainNav">
-            <a href="#services">Services</a>
-            <a href="#contact">Contacts</a>
-            <a href="#areas">Areas</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#quotes">Quote</a>
-            </nav>
-
-            <!-- RIGHT: Phone + Menu -->
-            <div class="phone_and_menu">
-
-                <a class="phone-box" href="tel:0400000000">
-                    <img src="images/phone.png" class="phone-icon">
-                    <p class="phone-number">0400 000 000</p>
+            <div class="header-middle-section">
+                <div id="mainNav" class="nav">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#contact">Contacts</a>
+                    <a class="nav-link" href="#areas">Areas</a>
+                    <a class="nav-link" href="#reviews">Testimonials</a>
+                    <a class="nav-link" href="#quotes">Quote</a>
+                </div>
+            </div>
+            <div class="header-right-section">
+                <a class="phone-box" href="tel:0000111222">
+                    <img class="phone-icon" src="images/phone-call.png">
+                    <span class="phone-number">0000 111 222</span>
                 </a>
-
                 <button class="menu-toggle" id="menuToggle">☰</button>
-
             </div>
-
         </div>
-        </header>
-
+   
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-content">
-                
+        <section class="hero" id="home">
                 <div class="hero-box">
-                    <h1>Professional Cleaning Sercvices</h1>
-                    <p>Residential and Commercial cleaning you can trust.</p>
+                    <h1>Need a Plumber Right Now?</h1>
+                    <!-- <h2>Don't let a small leak <br> turn into a big disaster.</h2> -->
+                    <p class="hero-text">Trusted local plumber servicing North Brisbane suburbs.</p>
                     <a href="#quotes" class="btn">Free Quote</a>
-                    <a  class="hero_call" href="tel:0416664910">Call Now</a>
-                    
+                    <a  class="hero_call" href="tel:0000111222">Call Now</a>
+                        
                     <br><br>
                     <div class="hero-rating">
                         ⭐ ⭐ ⭐ ⭐ ⭐
-                        <p>4.9 Google Rating – Trusted by Several Customers</p>
-                    </div>
+                        <p class="google-rating-text">4.9 Google Rating – Trusted by Several Customers</p>
+                    </div> 
                 </div>
-            </div>
+        </section>
+         <!--Trust worthy Section-->
+        <section class="trust-bar">
+
+            <div class="trust-item">✔ Licensed & Insured</div>
+
+            <div class="trust-item">✔ Same-Day Service</div>
+
+            <div class="trust-item">✔ 5 Stars Rated</div>
 
         </section>
+
+
 
         <!-- Service Section -->
         <section class="service_section" id="services">
             <div class="container">
                 <h2 class="sections-title">Our Services</h2>
+                
                 <div class="grid">
 
                     <div class="service">
-                    <div class="img"><img src="images/home.png" alt="Residential Cleaning"></div>
-                    <h3>Residential Cleaning</h3>
-                    <p>Keep your home pristine with our regular housekeeping, dusting, and sanitization services.</p>
+                        <div class="img"><img src="images/pipe_relining.jpg" alt="Pipe Relining"></div>
+                        <h3>Pipe Relining</h3>
+                        <!-- <p></p> -->
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/office.png" alt="Office Cleaning"></div>
-                        <h3>Office Cleaning</h3>
-                        <p>Create a productive environment with our tailored corporate and small office cleaning routines.</p>
+                        <div class="img"><img src="images/burst_pipe.jpg" alt="Burst Pipe Repairs"></div>
+                        <h3>Burst Pipe Repairs</h3>
+                        <p></p>
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/sparkles.png" alt="Commercial Spaces"></div>
-                        <h3>Commercial Spaces</h3>
-                        <p>High-traffic retail and commercial space maintenance to ensure your business always shines.</p>
+                        <div class="img"><img src="images/block_drain.jpg" alt="Drain Cleaning"></div>
+                        <h3>Drain Cleaning</h3>
+                        <p></p>
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/carpet-cleaning.png" alt="Carpet Cleaning"></div>
-                        <h3>Carpet Cleaning</h3>
-                        <p>Professional steam cleaning and stain removal to revitalize your carpets and rugs.</p>
+                        <div class="img"><img src="images/water_heater.jpg" alt="Water Heaters Repair/Installation"></div>
+                        <h3>Water Heaters Repair/Installation</h3>
+                        <p></p>
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/left-right-arrow.png" alt="Move In/Out Cleaning"></div>
-                        <h3>Move In/Out Cleaning</h3>
-                        <p>Ensure you leave behind a spotless space or step into a perfectly sanitized new home.</p>
+                        <div class="img"><img src="images/leak_detection.jpg" alt="Water/Gas Leak Detection"></div>
+                        <h3>Water/Gas Leak Detection</h3>
+                        <p></p>
                     </div>
 
                     <div class="service">
-                        <div class="img"><img src="images/cleaning-bottle.png" alt="Deep Cleaning"></div>
-                        <h3>Deep Cleaning</h3>
-                        <p>Intensive, top-to-bottom scrub down targeting hidden dirt, grime, and neglected areas.</p>
+                        <div class="img"><img src="images/general_plumbing.jpg" alt="General Plumbing"></div>
+                        <h3>General Plumbing</h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
         </section> 
 
         <!-- Contact Us Section -->
-         <section class="contact_section" id="contact">
+         <section class="contact_section" >
             <div class="container">
-                <h2 class="sections-title">Contact Us</h2>
+                <h2 class="sections-title" id="contact">Contact Us</h2>
                 <div class="contacts_container">
                     <div class="contact-card">
                         <div class="icon-circle">
-                            <a href="tel:0400000000"><img src="images/phone-call.png" alt="Phone"></a>
+                            <a href="tel:0000111222"><img src="images/phone-call.png" alt="Phone"></a>
                         </div>
                         <h3>Phone</h3>
-                        <p><a href="tel:0400000000">0400 512 433</a></p>
+                        <p><a href="tel:0000111222">0000 111 222</a></p>
                     </div>
 
                     <div class="contact-card">
@@ -140,9 +188,9 @@
             <div class="container">
                 <h2 class="area-title">Areas We Serve</h2>
                 <p class="center">
-                    We provide cleaning services across the entire metropolitan area.
-                    Contact us to check availability in your location.
-                    We bring our premium cleaning equipment and highly trained staff directly to your door.
+                    We offer our plumbing services throughout the entire metropolitan area.
+                    Get in touch to confirm availability in your suburb.
+                    Our skilled team arrives fully equipped, ready to deliver reliable service right at your doorstep.
                 </p>
                 <div class="map">
                 <iframe
@@ -158,53 +206,54 @@
         </section>
 
         <!-- Review Section -->
-        <Section class="review_section" id="reviews">
+        <Section class="review_section" >
             <div class="container">
 
-            <h2 class="sections-title">Customer Reviews</h2>
+            <h2 class="sections-title" id="reviews">What Our Customers Say</h2>
 
                 <div class="testimonial-slider">
 
                     <div class="review active">
-                        <p>"Fantastic cleaning service. Highly recommended!"</p>
-                        <h4>— Sarah M</h4>
+                        <p>"Fast service and very professional. Fixed my leaking pipe in 20 minutes!"</p>
+                        <h4>- Michael, Sandgate</h4>
                     </div>
 
                     <div class="review">
-                        <p>"Very professional team and great results."</p>
-                        <h4>— James L</h4>
-                    </div>
-
-                    <div class="review">
-                        <p>"Our office has never looked better."</p>
-                        <h4>— David P</h4>
+                        <p>"Highly recommended. Very friendly and affordable plumbing service."</p>
+                        <h4>- Sarah, Deagon</h4>
                     </div>
                 </div>
             </div>
         </Section>
 
         <!-- Quotation Section -->
-        <section class="quote_section" id="quotes">
+        <section class="quote_section" >
             <div class="container">
-
-                <h2 class="sections-title">Request a Free Quote</h2>
-
+                <h2 class="sections-title" id="quotes">Request a Free Quote</h2>
                 <form id="quoteForm">
+                    <input type="text" placeholder="Your Name" name="name" id="name" required>
+                    <input type="email" placeholder="Email Address" name="email" id="email" required>
+                    <input type="tel" placeholder="Phone Number" name="phone" id="phone">
 
-                    <input type="text" placeholder="Your Name" required>
-
-                    <input type="email" placeholder="Email Address" required>
-
-                    <input type="tel" placeholder="Phone Number">
-
-                    <textarea placeholder="Cleaning details"></textarea>
-
-                    <button class="btn">Send Request</button>
-
+                    <label>Service Required</label>
+                    <select name="service" id="service">
+                        <option>General Plumbing</option>
+                        <option>Leak Repair</option>
+                        <option>Drain Cleaning</option>
+                        <option>Water Heater Installation/Repair</option>
+                        <option>Emergency Plumbing</option>          
+                        <option>Pipe Relining</option>
+                        <option>Gas Fitting & Leak Detection</option>
+                        <option>Burst Pipe Repairs</option>
+                        <option>Other</option>
+                    </select>
+                    <label>Suburb</label>
+                    <input type="text" name="suburb" id="suburb">
+                    <textarea placeholder="Job details" name="message" id="message" rows="4"></textarea>
+                    <!-- <button class="btn">Send Request</button> -->
+                    <button class="btn" type="submit">Get A Free Quote</button>
                 </form>
-
                 <p id="formMessage"></p>
-
             </div>
         </section>
 
@@ -222,20 +271,89 @@
                 </div>
                 <p></p><p></p> -->
             <p>Licenced & Insured</p>
-            <p>© 2026 SparkleClean Experts.</p>
+            <p>© 2026 Waterwaus Plumbing.</p>
             <p>All rights reserved.</p>
         </footer>
+         
+            <!-- Modal window for result -->
+    <div id="successModal" class="modal">
+
+        <div class="modal-content success-box">
+
+            <div class="checkmark-circle">
+            <div class="checkmark"></div>
+        </div>
+
+        <h3 id="thank-you"></h3>
+    </div>
+
+    </div>
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-    <!-- This script is for hamburger menu for mobiles -->
+    // Conants value of EmailJs API
+    const public_key = "QMeN3Vqx6sZoMFy0w"
+    const service_key ="service_au3jk24";
+    const template_key = "template_mvlc6lx";
+    emailjs.init({
+    publicKey: public_key
+    });
+
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const params = {
+            name: document.getElementById("name").value,
+            phone: document.getElementById("phone").value,
+            email: document.getElementById("email").value,
+            service: document.getElementById("service").value,
+            suburb: document.getElementById("suburb").value,
+            message: document.getElementById("message").value
+        };
+
+        var name = document.getElementById("name").value;
+        
+        emailjs.send(service_key, template_key,params)
+        .then(function(){
+
+            document.getElementById("quoteForm").reset();
+
+            const modal = document.getElementById("successModal");
+        
+            
+            document.getElementById("thank-you").innerHTML = `Thanks ${name}! Your service request has been sent. We'll contact you soon.`;
+            modal.style.display = "flex";
+
+            setTimeout(function(){
+                modal.style.display = "none";
+            },4000);
+
+        })
+        .catch(function(error){
+            alert("Failed to send message.");
+            console.log(error);
+        });
+    });
+
+    const modal = document.getElementById("successModal");
+    //const closeBtn = document.querySelector(".close-btn");
+
+    //closeBtn.onclick = function() {
+    //modal.style.display = "none";
+    //}
+
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    //This script is for hamburger menu for mobiles 
 
     const menuBtn = document.getElementById("menuToggle");
     const nav = document.getElementById("mainNav");
     const navLinks = document.querySelectorAll("#mainNav a");
-
     menuBtn.addEventListener("click", function(){
 
         nav.classList.toggle("show");
@@ -279,6 +397,11 @@
     showReview();
 
     setInterval(showReview, 3000);
+
+
+
+
+
 </script>
     </body>
 </html>
